@@ -93,7 +93,7 @@
           <p>Opciones</p>
         </div>
         <div class="item-btn" *ngFor="let candidato of notificacionAprobados">
-          <button class="personalizar" (click)="personalizarMensaje()">Personzalizar</button>
+          <button class="personalizar" (click)="personalizarMensaje(candidato.telefono)">Personzalizar</button>
           <button class="predeterminado">Predeterminado</button>
         </div>
       </div>
@@ -124,7 +124,7 @@
           <p>Opciones</p>
         </div>
         <div class="item-btn" *ngFor="let candidato of notificacionDesaprobados">
-          <button class="personalizar" (click)="personalizarMensaje()">Personzalizar</button>
+          <button class="personalizar" (click)="personalizarMensaje(candidato.telefono)">Personzalizar</button>
           <button class="predeterminado">Predeterminado</button>
         </div>
       </div>

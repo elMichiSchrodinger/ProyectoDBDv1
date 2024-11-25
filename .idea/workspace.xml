@@ -31,7 +31,7 @@
         <entry key="$PROJECT_DIR$/frontend" value="master" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/frontend" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -62,7 +62,7 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.BackendApplication.executor": "Run",
-    "git-widget-placeholder": "ProyectoDBD",
+    "git-widget-placeholder": "<unknown>",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/jahir/Desktop/ProyectoDBD",
     "node.js.detected.package.eslint": "true",
@@ -120,7 +120,7 @@
       <workItem from="1732239465450" duration="619000" />
       <workItem from="1732242668926" duration="139000" />
       <workItem from="1732298354579" duration="25773000" />
-      <workItem from="1732494874035" duration="6092000" />
+      <workItem from="1732494874035" duration="18035000" />
     </task>
     <task id="LOCAL-00001" summary="Proyecto DBD">
       <option name="closed" value="true" />

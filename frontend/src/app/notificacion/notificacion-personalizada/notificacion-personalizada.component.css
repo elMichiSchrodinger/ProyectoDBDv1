@@ -53,6 +53,7 @@
 .contenido-rechazo{
   text-align: center;
   width: 70%;
+  align-self: center;
 }
 .contenedor-rechazo .contenido{
   background: #FD0D0D;
@@ -111,4 +112,28 @@
   font-family: 'Newsreader';
   cursor: pointer;
   border-radius: 10px;
+}
+.contenedor-contactar{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.contactar{
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background: #25D366;
+  color: #FFFFFF;
+  font-family: 'Newsreader';
+  font-size: 20px;
+  padding: 0 20px;
+}
+
+.contactar svg{
+  margin: 0 20px 0 0;
 }

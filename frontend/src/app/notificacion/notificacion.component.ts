@@ -60,7 +60,11 @@ export class NotificacionComponent implements OnInit {
       }
     })
   }
-  personalizarMensaje(){
+  personalizarMensaje(telefono:number){
+    this.notificacionService.setTelefono(telefono);
+    if (this.contador==2){
+      this.notificacionService.cambiarEstado();
+    }
     this.router.navigate(['personalizar']);
   }
 }

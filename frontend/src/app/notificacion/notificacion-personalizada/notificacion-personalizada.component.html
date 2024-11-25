@@ -26,22 +26,60 @@
       <h1>Notificar Candidatos</h1>
     </div>
   </nav>
-  <h2>Mensaje Personalizado de Aceptación</h2>
-  <div class="contenedor-rechazo">
-    <div class="contenido-rechazo">
-      <div class="contenido">
-        <div class="input">
-          <label for="Asunto">Asunto de la notificación:</label>
-          <input type="text" name="Asunto" id="Asunto" placeholder="Ingresé el asunto">
-        </div>
-        <div class="input">
-          <label for="Mensaje">Mensaje:</label>
-          <textarea name="" id="Mensaje" class="mensaje" placeholder="Ingresé el mensaje"></textarea>
+  <div class="contenedor-aprobados" *ngIf="getestado()">
+    <h2>Mensaje Personalizado de Aceptación</h2>
+    <div class="contenedor-rechazo">
+      <div class="contenido-rechazo">
+        <div class="contenido">
+          <div class="input">
+            <label for="Asunto">Asunto de la notificación:</label>
+            <input type="text" name="Asunto" id="Asunto" placeholder="Ingresé el asunto">
+          </div>
+          <div class="input">
+            <label for="Mensaje">Mensaje:</label>
+            <textarea name="" id="Mensaje" class="mensaje" placeholder="Ingresé el mensaje"></textarea>
+          </div>
         </div>
       </div>
+      <div class="btn-rechazo">
+        <button>Enviar</button>
+      </div>
     </div>
-    <div class="btn-rechazo">
-      <button>Enviar</button>
+    <div class="contenedor-contactar">
+      <button class="contactar">
+        <svg width="72" height="82" viewBox="0 0 72 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M61.2161 15.5512C54.4821 8.82461 45.5143 5.125 35.9839 5.125C16.3125 5.125 0.305357 21.0766 0.305357 40.6797C0.305357 46.9418 1.94464 53.0598 5.0625 58.457L0 76.875L18.9161 71.9262C24.1232 74.7609 29.9893 76.2504 35.9679 76.2504H35.9839C55.6393 76.2504 72 60.2988 72 40.6957C72 31.1984 67.95 22.2777 61.2161 15.5512ZM35.9839 70.2606C30.6482 70.2606 25.425 68.8352 20.8768 66.1445L19.8 65.5039L8.58214 68.4348L11.5714 57.5281L10.8643 56.407C7.89107 51.6984 6.33214 46.2691 6.33214 40.6797C6.33214 24.3918 19.6393 11.1309 36 11.1309C43.9232 11.1309 51.3643 14.2059 56.9571 19.7953C62.55 25.3848 65.9893 32.8 65.9732 40.6957C65.9732 56.9996 52.3286 70.2606 35.9839 70.2606ZM52.2482 48.127C51.3643 47.6785 46.9768 45.5324 46.1571 45.2441C45.3375 44.9398 44.7429 44.7957 44.1482 45.6926C43.5536 46.5895 41.85 48.5754 41.3196 49.184C40.8054 49.7766 40.275 49.8566 39.3911 49.4082C34.1518 46.7977 30.7125 44.7477 27.2571 38.8379C26.3411 37.2684 28.1732 37.3805 29.8768 33.9852C30.1661 33.3926 30.0214 32.8801 29.7964 32.4316C29.5714 31.9832 27.7875 27.6109 27.0482 25.8332C26.325 24.1035 25.5857 24.3438 25.0393 24.3117C24.525 24.2797 23.9304 24.2797 23.3357 24.2797C22.7411 24.2797 21.7768 24.5039 20.9571 25.3848C20.1375 26.2816 17.8393 28.4277 17.8393 32.8C17.8393 37.1723 21.0375 41.4004 21.4714 41.993C21.9214 42.5855 27.7554 51.5543 36.7071 55.4141C42.3643 57.8484 44.5821 58.0566 47.4107 57.6402C49.1304 57.384 52.6821 55.4941 53.4214 53.4121C54.1607 51.3301 54.1607 49.5523 53.9357 49.184C53.7268 48.7836 53.1321 48.5594 52.2482 48.127Z" fill="white"/>
+        </svg>
+        <p>Contactar: {{gettelefono()}}</p>
+      </button>
+    </div>
+  </div>
+  <div class="contenedor-desaprobados" *ngIf="!getestado()">
+    <h2>Mensaje Personalizado de Desaprobados</h2>
+    <div class="contenedor-rechazo">
+      <div class="contenido-rechazo">
+        <div class="contenido">
+          <div class="input">
+            <label for="Asunto_desaprobados">Asunto de la notificación:</label>
+            <input type="text" name="Asunto" id="Asunto_desaprobados" placeholder="Ingresé el asunto">
+          </div>
+          <div class="input">
+            <label for="Mensaje_desaprobados">Mensaje:</label>
+            <textarea name="" id="Mensaje_desaprobados" class="mensaje" placeholder="Ingresé el mensaje"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="btn-rechazo">
+        <button>Enviar</button>
+      </div>
+    </div>
+    <div class="contenedor-contactar">
+      <button class="contactar">
+        <svg width="72" height="82" viewBox="0 0 72 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M61.2161 15.5512C54.4821 8.82461 45.5143 5.125 35.9839 5.125C16.3125 5.125 0.305357 21.0766 0.305357 40.6797C0.305357 46.9418 1.94464 53.0598 5.0625 58.457L0 76.875L18.9161 71.9262C24.1232 74.7609 29.9893 76.2504 35.9679 76.2504H35.9839C55.6393 76.2504 72 60.2988 72 40.6957C72 31.1984 67.95 22.2777 61.2161 15.5512ZM35.9839 70.2606C30.6482 70.2606 25.425 68.8352 20.8768 66.1445L19.8 65.5039L8.58214 68.4348L11.5714 57.5281L10.8643 56.407C7.89107 51.6984 6.33214 46.2691 6.33214 40.6797C6.33214 24.3918 19.6393 11.1309 36 11.1309C43.9232 11.1309 51.3643 14.2059 56.9571 19.7953C62.55 25.3848 65.9893 32.8 65.9732 40.6957C65.9732 56.9996 52.3286 70.2606 35.9839 70.2606ZM52.2482 48.127C51.3643 47.6785 46.9768 45.5324 46.1571 45.2441C45.3375 44.9398 44.7429 44.7957 44.1482 45.6926C43.5536 46.5895 41.85 48.5754 41.3196 49.184C40.8054 49.7766 40.275 49.8566 39.3911 49.4082C34.1518 46.7977 30.7125 44.7477 27.2571 38.8379C26.3411 37.2684 28.1732 37.3805 29.8768 33.9852C30.1661 33.3926 30.0214 32.8801 29.7964 32.4316C29.5714 31.9832 27.7875 27.6109 27.0482 25.8332C26.325 24.1035 25.5857 24.3438 25.0393 24.3117C24.525 24.2797 23.9304 24.2797 23.3357 24.2797C22.7411 24.2797 21.7768 24.5039 20.9571 25.3848C20.1375 26.2816 17.8393 28.4277 17.8393 32.8C17.8393 37.1723 21.0375 41.4004 21.4714 41.993C21.9214 42.5855 27.7554 51.5543 36.7071 55.4141C42.3643 57.8484 44.5821 58.0566 47.4107 57.6402C49.1304 57.384 52.6821 55.4941 53.4214 53.4121C54.1607 51.3301 54.1607 49.5523 53.9357 49.184C53.7268 48.7836 53.1321 48.5594 52.2482 48.127Z" fill="white"/>
+        </svg>
+        <p>Contactar: {{gettelefono()}}</p>
+      </button>
     </div>
   </div>
 </div>

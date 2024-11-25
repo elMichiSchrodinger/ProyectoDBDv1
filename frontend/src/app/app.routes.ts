@@ -8,6 +8,8 @@ import {NotificacionComponent} from './notificacion/notificacion.component';
 import {
   NotificacionPersonalizadaComponent
 } from './notificacion/notificacion-personalizada/notificacion-personalizada.component';
+import {ListaVacantesComponent} from './lista-vacantes/lista-vacantes.component';
+import {DetalleVacanteComponent} from './lista-vacantes/detalle-vacante/detalle-vacante.component';
 
 export const routes: Routes = [
   {path:'vacante', component: VacanteComponent},
@@ -16,5 +18,7 @@ export const routes: Routes = [
   {path:'detallePostulacion', component: DetallePostulacionComponent},
   {path:'menu',component: MenuComponent},
   {path:'notificacion',component: NotificacionComponent},
-  {path:'personalizar',component:NotificacionPersonalizadaComponent}
+  {path:'personalizar',component:NotificacionPersonalizadaComponent},
+  {path:'listaVacantes',component:ListaVacantesComponent},
+  {path:'detalleVacante',component:DetalleVacanteComponent},
 ];

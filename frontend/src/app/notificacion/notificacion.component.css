@@ -144,4 +144,24 @@
 
 .item-btn{
   margin: 18px 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+.item-btn button{
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 47%;
+  font-family: 'Newsreader';
+  font-size: 20px;
+  color: #FFFFFF;
+}
+
+.personalizar{
+  background: #0D1CF6;
+}
+
+.predeterminado{
+  background: #0CA406;
 }
