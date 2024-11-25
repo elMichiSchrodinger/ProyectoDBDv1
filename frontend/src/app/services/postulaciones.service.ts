@@ -3,6 +3,7 @@ import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Postulaciones} from '../models/postulaciones.model';
 import {DetallePostulacion} from '../models/detallePostulacion.model';
+import {Postulacion} from '../models/postulacion.model';
 
 @Injectable({
   providedIn: 'root'
@@ -36,5 +37,8 @@ export class PostulacionesService {
     const url = `${this.apiUrl}/desaprobar`;
     const headers = new HttpHeaders({'Content-Type': 'application/json'});
     return this.http.put<Postulaciones>(url,postulacion,{headers});
+  }
+  crearPostulacion(postulacion:Postulacion):Observable<Postulacion> {
+    return this.http.post<Postulacion>(`${this.apiUrl}/crear`,postulacion);
   }
 }

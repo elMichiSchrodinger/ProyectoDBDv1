@@ -32,8 +32,8 @@ export class ListaVacantesComponent implements OnInit {
     })
   }
   verVacante(vacante:VacanteResumidaModel){
-    this.router.navigate(['detalleVacante']);
     this.vacanteService.setVacante(vacante);
+    this.router.navigate(['detalleVacante']);
   }
 
   ngOnInit() {

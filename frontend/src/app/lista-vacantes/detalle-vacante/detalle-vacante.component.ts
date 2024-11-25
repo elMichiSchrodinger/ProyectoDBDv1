@@ -25,4 +25,10 @@ export class DetalleVacanteComponent implements OnInit {
       }
     })
   }
+  redirigir(){
+    this.router.navigate(['postulacionVacante']);
+  }
+  volver(){
+    this.router.navigate(['listaVacantes']);
+  }
 }

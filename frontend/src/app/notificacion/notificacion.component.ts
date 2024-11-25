@@ -22,7 +22,7 @@ export class NotificacionComponent implements OnInit {
   notificacionDesaprobados:DetalleCandidato[]=[];
   estado=false;
   estadoAprobado=false;
-  contador=1;
+  contador=0;
   cambiarEstado(tipo: 'estado' | 'estadoAprobado') {
     if (tipo === 'estado') {
       this.estado = !this.estado;
@@ -38,8 +38,10 @@ export class NotificacionComponent implements OnInit {
     }
   }
   nextPage() {
-    if (this.contador < 8) { // Asegúrate de que no exceda la última página
+    if (this.contador < 2) { // Asegúrate de que no exceda la última página
       this.contador++;
+    }else {
+      this.router.navigate(['menu']);
     }
   }
   ngOnInit() {

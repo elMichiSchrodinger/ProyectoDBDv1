@@ -1,6 +1,6 @@
 <div class="contenedor-full">
   <nav class="barra">
-    <button class="flecha">
+    <button (click)="volver()" class="flecha">
       <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clip-path="url(#clip0_110_12)">
           <path d="M1.04925 22.793C-0.345843 24.0137 -0.345843 25.9961 1.04925 27.2168L18.9064 42.8418C20.3015 44.0625 22.5671 44.0625 23.9622 42.8418C25.3573 41.6211 25.3573 39.6387 23.9622 38.418L12.1876 28.125H46.4287C48.4042 28.125 50.0001 26.7285 50.0001 25C50.0001 23.2715 48.4042 21.875 46.4287 21.875H12.1988L23.951 11.582C25.3461 10.3613 25.3461 8.37891 23.951 7.1582C22.5559 5.9375 20.2903 5.9375 18.8952 7.1582L1.03809 22.7832L1.04925 22.793Z" fill="white"/>
@@ -39,7 +39,7 @@
       <p>Beneficio: {{detalleVacante.beneficio}}</p>
       <p>Modalidad: {{detalleVacante.modalidad}}</p>
     </div>
-    <button class="btn-postular">
+    <button class="btn-postular" (click)="redirigir()">
       Postular
     </button>
   </div>
